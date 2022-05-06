@@ -3,7 +3,7 @@ const products = [
     title: "Uva Crimson",
     price: 8.99,
     category: "Frutas",
-    image: "",
+    image: undefined,
     imageDescription: "",
   },
   {
@@ -31,7 +31,7 @@ const products = [
     title: "Refrigerante",
     price: 8.99,
     category: "Bebidas",
-    image: "",
+    image: undefined,
     imageDescription: "",
   },
   {
@@ -45,7 +45,7 @@ const products = [
     title: "Água Tônica",
     price: 8.99,
     category: "Bebidas",
-    image: "",
+    image: undefined,
     imageDescription: "",
   },
   {
@@ -84,7 +84,7 @@ const products = [
     title: "Lustra Móveis",
     price: 8.99,
     category: "Higiene",
-    image: "",
+    image: undefined,
     imageDescription: "",
   },
 ];

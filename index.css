@@ -42,10 +42,11 @@ nav img {
     padding-top: 100px;
 }
 
-.products-content {
+.products-content ul{
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
+  list-style: none;
 }
 
 .product {

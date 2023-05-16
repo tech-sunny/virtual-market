@@ -89,7 +89,7 @@ const products = [
   },
 ];
 
-let uls = document.querySelectorAll("main.products-content > ul");
+let uls = document.querySelectorAll("div.products-content > ul");
 
 let listByCategory = (tagList, productArray) => {
     for (let i = 0; i < tagList.length; i++) {
@@ -112,14 +112,14 @@ let listProducts = (tagHtml, productArray) => {
 let templateCreate = (obj) => {
     let tagLi = document.createElement("li");
     let tagImg = document.createElement("img");
-    let tagMain = document.createElement("main");
+    let tagDiv = document.createElement("div");
 
-    let tagH1 = document.createElement("h1");
+    let tagH1 = document.createElement("h2");
     let tagH5 = document.createElement("h5");
     let tagStrong = document.createElement("strong");
 
     tagLi.className = "product";
-    tagMain.className = "product-main";
+    tagDiv.className = "product-main";
 
     if (!obj.image) {
       obj.image = "./img/products/no-img.svg"      
@@ -137,10 +137,10 @@ let templateCreate = (obj) => {
     tagH5.innerText = obj.category;
     
     tagStrong.className = "product-price";
-    tagStrong.innerText = `R$ ${obj.price}`;
+    tagStrong.innerText = `R$ ${(obj.price.toFixed(2))}`;
 
-    tagMain.append(tagH1, tagH5, tagStrong);
-    tagLi.append(tagImg, tagMain);
+    tagDiv.append(tagH1, tagH5, tagStrong);
+    tagLi.append(tagImg, tagDiv);
 
     return tagLi;
 }
